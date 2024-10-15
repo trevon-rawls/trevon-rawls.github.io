@@ -1,0 +1,130 @@
+/* Basic styling for layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Modal overlay */
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+    z-index: 1000; /* On top of everything */
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#passwordInput {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 80%;
+}
+
+#submitPassword {
+    padding: 10px 20px;
+    background-color: #383a7c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#errorMessage {
+    color: red;
+    margin-top: 10px;
+    display: none;
+}
+
+/* Other existing styles */
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#mainFrame {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+#slideWindow {
+    position: absolute;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    transition: right 0.3s ease-in-out;
+    background-color: white;
+}
+
+#slideFrame {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.button-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    overflow: visible;
+    pointer-events: none;
+}
+
+#toggleButton {
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: 60px;
+    height: 60px;
+    background-color: #383a7c;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 0 20px 0;
+    transition: top 0.3s ease-in-out, left 0.3s ease-in-out;
+    pointer-events: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#buttonLogo {
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#toggleButton:hover {
+    top: 0px;
+    left: 0px;
+    background-color: #2d2f6e;
+}
+
+#toggleButton:hover #buttonLogo {
+    opacity: 1;
+}

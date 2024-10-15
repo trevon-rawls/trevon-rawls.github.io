@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedded Website with Sliding Window and Password Protection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Password overlay -->
+    <div id="passwordModal" class="modal">
+        <div class="modal-content">
+            <h2>Enter Password</h2>
+            <input type="password" id="passwordInput" placeholder="Password">
+            <button id="submitPassword">Submit</button>
+            <p id="errorMessage"></p>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Main embedded website -->
+        <iframe id="mainFrame" src="http://108.244.85.110:32400/" frameborder="0"></iframe>
+        
+        <!-- Sliding window on the right -->
+        <div id="slideWindow">
+            <iframe id="slideFrame" src="http://108.244.85.110:5050/" frameborder="0"></iframe>
+        </div>
+
+        <!-- Button container to position it over the iframe border -->
+        <div class="button-container">
+            <button id="toggleButton">
+                <img src="overseer_logo.png" alt="Logo" id="buttonLogo">
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
